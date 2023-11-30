@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image";
+import { SyntheticEvent } from "react";
 
 export interface AnimeProp {
   id: string;
@@ -27,7 +28,10 @@ function AnimeCard({ anime }: Prop) {
           alt={anime.name}
           fill
           className="rounded-xl object-cover  bg-gray-200  transition-all duration-2000 animate-pulse"
-          onLoadingComplete={(image) => image?.classList?.remove('animate-pulse')}
+          onLoad={(imageEvent:SyntheticEvent<HTMLImageElement, Event>): void => {  
+            const image = imageEvent.target as HTMLImageElement;
+            image?.classList?.remove('animate-pulse')
+          }}
           priority
         />
       </div>
