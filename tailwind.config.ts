@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      transitionDuration: {
+        0: '0ms',
+        2000: '2000ms',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
