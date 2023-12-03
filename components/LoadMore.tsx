@@ -27,6 +27,7 @@ function LoadMore() {
       </section>
       <section className="flex justify-center items-center w-full">
         <div ref={ref}>
+          
           <Image
             src="./spinner.svg"
             alt="spinner"
